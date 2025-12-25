@@ -57,10 +57,6 @@ html {
 body {
   min-height: 100vh;
   line-height: 1.5;
-
-  font-family: var(--fonte-principal);
-  background-color: var(--bg-body);
-  color: var(--text-body);
 }
 
 /* =====================================================

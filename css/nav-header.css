@@ -1,0 +1,307 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /* =====================================================
+     TIPOGRAFIA
+     ===================================================== */
+  --fonte-principal: "Poppins", system-ui, sans-serif;
+  --fonte-destaque: "Playfair Display", serif;
+
+  /* HEADER */
+  --header-bg: linear-gradient(
+    90deg,
+    var(--botao-primario-hover),
+    var(--azul-foco)
+  );
+  --header-bg-hover: var(--botao-primario-hover);
+
+  /* DROPDOWN */
+  --dropdown-bg: var(--azul-foco);
+  --dropdown-hover: var(--rosa-lilas-hover);
+
+  /* TEXTO */
+  --texto-header: var(--texto-invertido);
+  --fundo-geral: var(--cor-fundo-principal);
+
+  /* TAMANHO */
+  --normal-font-size: 0.95rem;
+
+  /* PESO */
+  --font-regular: 400;
+  --font-semi-bold: 500;
+
+  /* Z-INDEX */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--fonte-principal); /* POPPINS */
+  font-size: var(--normal-font-size);
+  background-color: var(--fundo-geral);
+  color: var(--texto-principal);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== CONTAINER ===============*/
+.containerr {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-bg);
+  box-shadow: var(--sombra-leve);
+  z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+}
+
+.nav__logo,
+.nav__burger,
+.nav__close {
+  color: var(--texto-header);
+}
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO — PLAYFAIR */
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  font-family: var(--fonte-destaque); /* PLAYFAIR */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.nav__logo i {
+  font-size: 1.3rem;
+  color: var(--amarelo-acento);
+}
+
+/*=============== TOGGLE ===============*/
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger,
+.nav__close {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.4s;
+}
+
+.nav__close {
+  opacity: 0;
+}
+
+/*=============== MOBILE MENU ===============*/
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+  }
+
+  .nav__list {
+    background-color: var(--cor-estrutura);
+    padding-top: 1rem;
+  }
+}
+
+/*=============== LINKS PRINCIPAIS — POPPINS ===============*/
+.nav__link {
+  font-family: var(--fonte-principal); /* POPPINS */
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: var(--texto-header);
+  background-color: transparent;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition:
+    background-color var(--transicao-padrao),
+    color var(--transicao-padrao),
+    transform var(--transicao-padrao);
+}
+
+.nav__link:hover {
+  background-color: var(--azul-foco);
+  color: var(--amarelo-acento);
+  transform: translateX(4px);
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: var(--header-height);
+  pointer-events: initial;
+}
+
+/* Toggle icons */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown__item {
+  cursor: pointer;
+}
+
+.dropdown__arrow {
+  font-size: 1.2rem;
+  color: var(--amarelo-acento);
+  transition: transform 0.4s, color var(--transicao-padrao);
+}
+
+.dropdown__menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: var(--dropdown-bg);
+  border-radius: var(--raio-padrao);
+  box-shadow: var(--sombra-leve);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dropdown__item:hover .dropdown__menu {
+  max-height: 1000px;
+}
+
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+  color: var(--rosa-lilas-destaque);
+}
+
+/*=============== DROPDOWN LINKS — POPPINS MAIS LEVE ===============*/
+.dropdown__link {
+  font-family: var(--fonte-principal); /* POPPINS */
+  font-weight: 400;
+  font-size: 0.92rem;
+  padding: 1.1rem 1.25rem 1.1rem 2.5rem;
+  color: var(--texto-invertido);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition:
+    background-color var(--transicao-padrao),
+    color var(--transicao-padrao),
+    padding-left var(--transicao-padrao);
+}
+
+.dropdown__link i {
+  font-size: 1.1rem;
+  color: var(--amarelo-acento);
+}
+
+.dropdown__link:hover {
+  background-color: var(--botao-emocional);
+  color: var(--texto-principal);
+  padding-left: 2.9rem;
+}
+
+/*=============== DESKTOP ===============*/
+@media screen and (min-width: 1118px) {
+  .containerr {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    height: 100%;
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__link:hover {
+    background-color: transparent;
+    color: var(--amarelo-acento);
+    transform: translateY(-2px);
+  }
+
+  .dropdown__item {
+    position: relative;
+  }
+
+  .dropdown__menu {
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, top 0.3s;
+  }
+
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: auto;
+  }
+}

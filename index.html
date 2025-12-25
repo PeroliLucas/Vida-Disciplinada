@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vida Organizada & Disciplinada</title>
+
+    <!-- ================= FONTS ================= -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+
+    <!-- ============== REMIX ICONS ============== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- ================= AOS =================== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- ================= CSS GLOBAL ================= -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/nav-header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- ============ CSS DA PÁGINA =============== -->
+    <link rel="stylesheet" href="css/pages/home.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER DINÂMICO ================= -->
+    <header id="site-header"></header>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main id="main-content">
+      <div class="progress-bar" aria-hidden="true"></div>
+
+    </main>
+
+    <!-- ================= FOOTER DINÂMICO ================= -->
+    <footer id="site-footer"></footer>
+
+    <!-- ================= JS GLOBAL ================= -->
+    <script src="js/nav-footer.js" defer></script>
+    <script src="js/checklist.js" defer></script>
+
+    <!-- ================= AOS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.AOS) {
+          AOS.init({
+            duration: 700,
+            easing: "ease-out-cubic",
+            once: true,
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
