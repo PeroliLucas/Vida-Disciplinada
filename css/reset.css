@@ -1,0 +1,162 @@
+/* =====================================================
+   RESET / BASE GLOBAL
+   VIDA ORGANIZADA & DISCIPLINADA
+   Projeto educativo para adolescentes
+   -----------------------------------------------------
+   Este arquivo:
+   • Normaliza comportamentos entre browsers
+   • NÃO define identidade visual fixa
+   • Usa APENAS tokens semânticos quando necessário
+   • É compatível com tema claro e escuro
+   ===================================================== */
+
+/* =====================================================
+   1. BOX SIZING GLOBAL
+   -----------------------------------------------------
+   Garante cálculos previsíveis de largura/altura
+   ===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   2. RESET DE MARGENS E PADDINGS
+   -----------------------------------------------------
+   Remove estilos inconsistentes dos browsers
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================================================
+   3. CONFIGURAÇÕES DO HTML
+   -----------------------------------------------------
+   • Melhora renderização de texto
+   • Evita zoom estranho em mobile
+   • Controla scroll
+   ===================================================== */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Scroll suave (respeitado no reduce motion) */
+  scroll-behavior: smooth;
+}
+
+/* =====================================================
+   4. BODY BASE
+   -----------------------------------------------------
+   IMPORTANTE:
+   • NÃO usar cores fixas (#fff / #111)
+   • Tudo vem de tokens semânticos
+   ===================================================== */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+
+  font-family: var(--fonte-principal);
+  background-color: var(--bg-body);
+  color: var(--text-body);
+}
+
+/* =====================================================
+   5. LISTAS
+   -----------------------------------------------------
+   Estilo visual removido
+   Semântica continua existindo
+   ===================================================== */
+ul,
+ol {
+  list-style: none;
+}
+
+/* =====================================================
+   6. LINKS
+   -----------------------------------------------------
+   Aparência neutra por padrão
+   Estilo vem do layout/components
+   ===================================================== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================================================
+   7. MÍDIA RESPONSIVA
+   -----------------------------------------------------
+   Evita overflow e espaços fantasmas
+   ===================================================== */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =====================================================
+   8. INPUTS, BOTÕES E FORMULÁRIOS
+   -----------------------------------------------------
+   Herdam tipografia e cores do contexto
+   ===================================================== */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* =====================================================
+   9. BOTÕES BASE
+   -----------------------------------------------------
+   Remove estilo nativo
+   Layout define aparência final
+   ===================================================== */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =====================================================
+   10. CONTROLE DE OVERFLOW HORIZONTAL
+   -----------------------------------------------------
+   Evita scroll lateral indesejado
+   ===================================================== */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   11. FOCO ACESSÍVEL (WCAG)
+   -----------------------------------------------------
+   Usa token de foco do design system
+   ===================================================== */
+:focus-visible {
+  outline: 2px solid var(--azul-foco);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   12. REDUÇÃO DE MOVIMENTO
+   -----------------------------------------------------
+   Respeita usuários com sensibilidade
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

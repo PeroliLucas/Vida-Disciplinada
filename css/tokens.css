@@ -1,0 +1,69 @@
+/* =====================================================
+   TOKENS DE DESIGN — VIDA ORGANIZADA & DISCIPLINADA
+   Projeto educativo para adolescentes
+   ===================================================== */
+
+:root {
+  /* =====================================================
+   1.1 BACKGROUND E CORES PRINCIPAIS
+   ===================================================== */
+  --cor-fundo-principal: #f4f1e8;
+  --cor-estrutura: #8a9aaa;
+
+  /* =====================================================
+   1.2 TEXTOS
+   ===================================================== */
+  --texto-principal: #2b2b2b;
+  --texto-secundario: #5f5f5f;
+  --texto-invertido: #f4f1e8;
+
+  /* =====================================================
+   1.3 CORES DE DESTAQUE E INTERAÇÃO
+   ===================================================== */
+  --fundo-card: #ffffff;
+  --verde-progresso: #8fbfa2;
+  --azul-foco: #7f9fb0;
+  --amarelo-acento: #e7ddc4;
+
+  /* NOVO — emocional / atenção suave */
+  --rosa-lilas-destaque: #c9a3b8;
+  --rosa-lilas-hover: #b58da3;
+
+  /* =====================================================
+   1.4 CORES DE BOTÕES E LINKS
+   ===================================================== */
+  --botao-primario: #8a9aaa;
+  --botao-primario-hover: #748596;
+
+  --botao-secundario: #8fbfa2;
+  --botao-secundario-hover: #79a98c;
+
+  /* botão especial / reflexão */
+  --botao-emocional: var(--rosa-lilas-destaque);
+  --botao-emocional-hover: var(--rosa-lilas-hover);
+
+  --link: #7f9fb0;
+  --link-hover: #6b8a9a;
+
+  /* =====================================================
+   1.5 SOMBRAS
+   ===================================================== */
+  --sombra-leve: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  /* =====================================================
+     2. TIPOGRAFIA
+     ===================================================== */
+  --fonte-principal: "Inter", system-ui, sans-serif;
+  --fonte-destaque: "Poppins", system-ui, sans-serif;
+
+  /* =====================================================
+     3. FORMAS E RAIOS
+     ===================================================== */
+  --raio-padrao: 14px;
+  --raio-botao: 999px;
+
+  /* =====================================================
+     4. TRANSIÇÕES
+     ===================================================== */
+  --transicao-padrao: 0.25s ease;
+}
