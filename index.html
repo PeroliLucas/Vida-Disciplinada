@@ -7,10 +7,10 @@
     <title>Vida Organizada & Disciplinada</title>
 
     <!-- ================= FONTS ================= -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
-  rel="stylesheet"
-/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- ============== REMIX ICONS ============== -->
     <link
@@ -41,9 +41,149 @@
     <header id="site-header"></header>
 
     <!-- ================= CONTEÚDO PRINCIPAL ================= -->
-    <main id="main-content">
-      <div class="progress-bar" aria-hidden="true"></div>
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero" data-aos="fade-up">
+        <div class="hero-content">
+          <h1>
+            Vida Organizada
+            <span>disciplina, rotina e autoconsciência</span>
+          </h1>
 
+          <p>
+            Viver de forma organizada não é seguir regras rígidas ou buscar
+            perfeição. É compreender seus próprios ritmos, respeitar seus
+            limites e construir hábitos que façam sentido para a sua realidade.
+          </p>
+
+          <a href="pages/organizacao.html" class="button primary">
+            <div class="button__shadow"></div>
+            <div class="button__content">
+              <span class="button__text">Conhecer minha rotina</span>
+              <div class="button__reflection-1"></div>
+              <div class="button__reflection-2"></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ================= INTRO ================= -->
+      <section class="section intro" data-aos="fade-up">
+        <h2>Por que este projeto existe?</h2>
+
+        <p>
+          Em um contexto marcado por excesso de informações, cobranças constantes
+          e comparação social, muitos jovens passam a associar disciplina e
+          organização a culpa, rigidez e esgotamento.
+        </p>
+
+        <p>
+          O projeto <strong>Vida Organizada</strong> surge como uma proposta
+          educativa e reflexiva, que busca desconstruir essa visão punitiva e
+          apresentar a organização como uma ferramenta de cuidado, autonomia e
+          equilíbrio.
+        </p>
+      </section>
+
+      <!-- ================= CAMINHOS ================= -->
+      <section class="section caminhos" data-aos="fade-up">
+        <h2>Caminhos de exploração</h2>
+
+        <div class="cards">
+          <article class="card">
+            <i class="ri-calendar-check-line"></i>
+            <h3>Organização</h3>
+            <p>
+              Estruturar o dia, definir prioridades e planejar tarefas de forma
+              realista, reduzindo ansiedade e sobrecarga.
+            </p>
+            <a href="pages/organizacao.html">Explorar</a>
+          </article>
+
+          <article class="card">
+            <i class="ri-moon-line"></i>
+            <h3>Sono & Telas</h3>
+            <p>
+              Entender como hábitos digitais impactam o descanso, a concentração
+              e o bem-estar emocional.
+            </p>
+            <a href="pages/sono.html">Explorar</a>
+          </article>
+
+          <article class="card">
+            <i class="ri-heart-pulse-line"></i>
+            <h3>Corpo & Energia</h3>
+            <p>
+              Pequenas escolhas ligadas à alimentação e movimento que influenciam
+              diretamente a disposição física e mental.
+            </p>
+            <a href="pages/alimentacao-atividades/alimentacao.html">Explorar</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= REFLEXÃO ================= -->
+      <section class="section reflexao" data-aos="fade-up">
+        <h2>Organizar também é refletir</h2>
+
+        <p>
+          Antes de mudar hábitos, é fundamental compreender como você se
+          relaciona com o tempo, com as tarefas e com as expectativas externas.
+        </p>
+
+        <p>
+          Este projeto propõe momentos de autoavaliação e escuta, incentivando
+          escolhas mais conscientes e sustentáveis no dia a dia.
+        </p>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="section faq" data-aos="fade-up">
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-item">
+          <h3>Preciso seguir uma rotina rígida?</h3>
+          <p>
+            Não. Organização saudável pressupõe flexibilidade e adaptação às
+            suas necessidades.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Disciplina não é cansativa?</h3>
+          <p>
+            Quando baseada em autocuidado e propósito, a disciplina reduz o
+            cansaço mental.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Por onde começo?</h3>
+          <p>
+            Comece se observando. Pequenas mudanças conscientes são mais eficazes
+            do que transformações bruscas.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= DESTAQUE ================= -->
+      <section class="section destaque" data-aos="fade-up">
+        <h2>Como você organiza a sua vida?</h2>
+
+        <p>
+          Suas escolhas diárias constroem sua rotina. O primeiro passo é se
+          conhecer melhor.
+        </p>
+
+        <a href="pages/reflexao.html" class="button secondary">
+          <div class="button__shadow"></div>
+          <div class="button__content">
+            <span class="button__text">Fazer autoavaliação</span>
+            <div class="button__reflection-1"></div>
+            <div class="button__reflection-2"></div>
+          </div>
+        </a>
+      </section>
     </main>
 
     <!-- ================= FOOTER DINÂMICO ================= -->
@@ -51,7 +191,6 @@
 
     <!-- ================= JS GLOBAL ================= -->
     <script src="js/nav-footer.js" defer></script>
-    <script src="js/checklist.js" defer></script>
 
     <!-- ================= AOS ================= -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
